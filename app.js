@@ -23,10 +23,9 @@ var campgroundRoute				= require("./routes/campgrounds"),
 	indexRoute					= require("./routes/index");
 	
 	
+// export DATABASEURL=mongodb://localhost/yelp_camp
+mongoose.connect(process.env.DATABASEURL);
 
-
-// mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://campingph:vincent123@ds139985.mlab.com:39985/campingph");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 //__dirname - return the value of directory name
